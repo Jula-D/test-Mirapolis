@@ -1,0 +1,114 @@
+/*!** common ***/
+
+html
+body {
+	font-family: base_font_family;
+	font-size: 20px;
+	line-height: 1.7;
+	color: main_text;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+    width: 320px;
+    margin: 100px auto;
+	padding: 30px 0 0 30px;
+}
+
+.wrapper,
+.folder {
+	&:after {
+		content: '';
+		position: absolute;
+		top: 25px;
+		bottom: 15px;
+		left: 37px;
+		border-left: 1px dotted black;
+	}
+}
+
+.folder,
+.item {
+	padding: 30px 0 0 30px;
+	
+	.folder>& {
+		display: none;
+	}
+
+	.folder_opened>& {
+		display: block;	
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 23px;
+		top: 15px;
+		left: 7px;
+		border-top: 1px dotted black;
+	}
+
+	&__icon {
+		position: absolute;
+		left: 28px;
+		top: 7px;
+		width: 20px;
+		height: 20px;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	&__button {
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		left: 0;
+		top: 10px;
+		background-color: #fff;
+		border: 1px solid #000;
+		cursor: pointer;
+		z-index: 5;
+
+		&:before {
+			display: block;
+			width: 100%;
+			height: 100%;
+			content: '+';
+			color: #000;
+			font-size: 16px;
+			line-height: 14px;
+			text-align: center;
+
+			.folder_opened>& {
+				content: '-';
+			}	
+		}
+	}
+
+	&__name {
+		position: absolute;
+		left: 50px;
+		top: 0;
+	}
+}
+
+.folder {
+	&__icon {
+		background-image: url('../img/icon-folder.svg');
+		background-size: contain;
+
+		.folder_opened & {
+			background-image: url('../img/icon-folder-opened.svg');	
+		}	
+	}	
+}
+
+.item {
+	&__icon {
+		background-image: url('../img/icon-file.svg');
+	}
+}
+
+/*!** end-common ***/

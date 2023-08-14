@@ -1,0 +1,33 @@
+/*!** common ***/
+
+html
+body
+	background main_background
+	color main_text
+	font-family base_font_family
+	font-size base_font_size
+
+a
+	color link_color
+	text-decoration underline
+
+	&:hover
+		text-decoration none
+
+.clear
+	clear both
+	height 0
+
+.clearfix
+	*zoom 1
+
+	&:before
+	&:after
+		content ''
+		display table
+		line-height 0
+
+	&:after
+		clear both
+
+/*!** end-common ***/

@@ -1,0 +1,58 @@
+extends layouts/default
+
+block head
+	- title = 'Mirapolis test';
+
+block content
+	.wrapper
+		.folder.folder_opened
+			button.folder__button
+			.folder__icon
+			.folder__name Folder 1
+			.item
+				.item__icon
+				.item__name Item 1.1
+		
+		.folder.folder_opened
+			button.folder__button
+			.folder__icon
+			.folder__name Folder 2
+			.folder
+				button.folder__button
+				.folder__icon
+				.folder__name Subfolder 2.1
+				.item
+					.item__icon
+					.item__name File 2.1.1
+				.item
+					.item__icon
+					.item__name File 2.1.2
+			.item
+				.item__icon
+				.item__name File 2.2
+
+		.folder
+			button.folder__button
+			.folder__icon
+			.folder__name Folder 3
+			.folder
+				button.folder__button
+				.folder__icon
+				.folder__name Subfolder 3.1
+				.folder
+					button.folder__button
+					.folder__icon
+					.folder__name Subfolder 3.1.1
+					.item
+						.item__icon
+						.item__name File 3.1.1.1
+				.item
+					.item__icon
+					.item__name File 3.1.2
+			.item
+				.item__icon
+				.item__name Item 3.2
+
+		.item
+			.item__icon
+			.item__name File 4

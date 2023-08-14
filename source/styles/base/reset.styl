@@ -1,0 +1,45 @@
+/*!** reset ***/
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: inherit;
+	position: relative;
+
+	&:before,
+	&:after {
+		box-sizing: inherit;
+	}
+}
+
+html {
+	box-sizing: border-box;
+}
+
+button {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+	-webkit-appearance: none;
+	border-radius: 0;
+	overflow: hidden;
+	border: none;
+	text-transform: none;
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+:focus {
+	outline: none;
+}
+
+/*!** end-reset ***/

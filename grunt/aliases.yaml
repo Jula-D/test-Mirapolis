@@ -1,0 +1,15 @@
+build:
+  - 'clean:dist'
+  - 'stylus'
+  - 'autoprefixer'
+  - 'cmq'
+  - 'csscomb'
+  - 'jade'
+  - 'prettify'
+  - 'jshint'
+  - 'copy'
+
+default:
+  - 'build'
+  - 'connect'
+  - 'watch'
